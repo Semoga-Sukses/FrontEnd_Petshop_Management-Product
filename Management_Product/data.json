@@ -1,0 +1,32 @@
+{
+  "messages": "Success Get All Data",
+  "data": [
+    {
+      "id": 1,
+      "name": "Dry Food Whiskas",
+      "description": "Makanan renyah untuk Kucing kesayangan anda",
+      "price": 40000,
+      "stock": 30,
+      "type": "Food",
+      "image": "/images/DryFood_Whiskas.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Wet Food Whiskas",
+      "description": "Makanan basah untuk Kucing kesayangan anda",
+      "price": 30000,
+      "stock": 15,
+      "type": "Food",
+      "image": "/images/WetFood_Whiskas.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Kalung Kucing",
+      "description": "Kalung lucu untuk kucing kesayangan anda",
+      "price": 7000,
+      "stock": 40,
+      "type": "Aksesoris",
+      "image": "/images/Acc_Kalung_Kucing.jpg"
+    }
+  ]
+}

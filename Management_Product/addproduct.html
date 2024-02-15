@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tambahkan Produk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="file-addProduct">
+    <div class="container">
+      <h1>Tambahkan Produk</h1>
+      <form
+        action="https://ea1a-125-164-19-28.ngrok-free.app/product"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <!-- <div style="display: flex; flex-direction: column">
+          <label for="id">ID Produk</label>
+          <input autofocus id="id" placeholder="ID Produk" type="text" />
+        </div> -->
+        <div style="display: flex; flex-direction: column">
+          <label for="name">Nama Produk</label>
+          <input autofocus id="name" placeholder="Nama Produk" type="text" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="description">Deskripsi</label>
+          <input
+            autofocus
+            id="description"
+            placeholder="Deskripsi"
+            type="text"
+          />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="price">Harga</label>
+          <input autofocus id="price" placeholder="Harga Produk" type="text" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="stock">Stok</label>
+          <input autofocus id="stock" placeholder="Stok" type="text" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="type">Tipe Produk</label>
+          <input autofocus id="type" placeholder="Tipe Produk" type="text" />
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <label for="image">Image</label>
+          <input autofocus id="image" placeholder="image" type="file" />
+        </div>
+        <button>
+          <a href="index.html">Back</a>
+        </button>
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+  <script>
+    const form = document.querySelector("form");
+    form.onsubmit = function (event) {
+      event.preventDefault();
+      //const id = document.querySelector("#id").value;
+      const name = document.querySelector("#name").value;
+      const description = document.querySelector("#description").value;
+      const price = document.querySelector("#price").value;
+      const stock = document.querySelector("#stock").value;
+      const type = document.querySelector("#type").value;
+      const image = document.querySelector("#image").files[0];
+
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("description", description);
+      formData.append("price", price);
+      formData.append("stock", stock);
+      formData.append("type", type);
+      formData.append("image", image); 
+
+      fetch("https://ea1a-125-164-19-28.ngrok-free.app/product", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error("Error uploading product:", error);
+        });
+      //return false;
+    };
+  </script>
+</html>

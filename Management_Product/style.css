@@ -1,0 +1,94 @@
+* {
+  font-family: "poppins";
+}
+
+.nav-bar {
+  display: flex;
+  gap: 975px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color: #181e4b;
+  .name {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+  }
+  img {
+    padding-top: 30px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.menu {
+  padding-top: 30px;
+  display: flex;
+  gap: 11px;
+  width: 46px;
+  height: 42px;
+  .botton {
+    background-color: violet;
+  }
+  .home {
+    border: none;
+    background-color: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #181e4b;
+  }
+  .image {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    border-radius: 65px;
+    padding: 3px 3px;
+    border: none;
+  }
+}
+
+.content {
+  padding-right: 100px;
+  padding-left: 100px;
+  h1 {
+    width: 635px;
+    font-size: 54px;
+    font-weight: 700;
+    color: #181e4b;
+    padding-bottom: 11px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.file-addProduct {
+  h1 {
+    font-size: 20px;
+    align-items: normal;
+  }
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #181e4b;
+
+  .container {
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 20px;
+  }
+
+  form {
+    font-size: 15px;
+  }
+}
